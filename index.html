@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Tuta's Cabeleireiros</title>
+</head>
+<body>
+    <div class="header">
+        <div class="card">
+            <img src="./assets/salao.jpg" alt="Frente do salão">
+        </div>
+        <div class="name">
+            <h1>Tuta's Cabeleireiros</h1>
+            <h2>(Unissex)</h2>
+        </div>
+    </div>
+    <ul class="treelink">
+        <li> 
+            <button class="link button-whatsapp">
+                <img class="icon" src="./assets/whatsapp-icon.svg" alt="Ícone do Whatsapp">
+                <p>Agendar horário</p>
+            </button>
+        </li>
+        <li>
+            <button class="link" onclick="window.open('./assets/tabela.png','_blank')">
+                <img class="icon" id="tesoura" src="./assets/tesoura-icon.png" alt="Ícone de uma tesoura prata">
+                <p>Serviços</p>
+            </button>
+        </li>
+        <li>
+            <button class="link" onclick="window.open('https://www.instagram.com/tutascabeleireiros/','_blank')">
+                <img class="icon" src="./assets/instagram-icon.svg" alt="Ícone do Instagram">
+                <p>Instagram</p>
+            </button>
+        </li>
+        <li>
+            <button class="link">
+                <img class="icon" src="./assets/facebook-icon.svg" alt="Ícone do Facebook">
+                <p>Facebook</p>
+            </button>
+        </li>
+        <li>
+            <button class="link" onclick="window.open('https://goo.gl/maps/P7T9W27XF5B8BZj39','_blank')">  
+                <img class="icon" src="./assets/google-maps-icon.svg" alt="Ícone do Google Maps">
+                <p>Localização</p>
+            </button>
+        </li>
+    </ul>
+    <div class="popup-wrapper">
+        <div class="popup">
+            <header>
+                <button id="button-close-popup">X</button>
+                <h2>Verificar disponibilidade de horário</h2>
+            </header>
+            <form action="">
+                <div class="form-group">
+                    <label for="service">Escolha o serviço: </label>
+                    <select name="service" id="service">
+                        <option value="Corte masculino">Corte masculino</option>
+                        <option value="Corte masculino + Barba">Corte masculino + Barba</option>
+                        <option value="Corte masculino + Barba + Sobrancelha">Corte masculino + Barba + Sobrancelha</option>
+                        <option value="Corte feminino">Corte feminino</option>
+                        <option value="Barba">Barba</option>
+                        <option value="Barba + Sobrancelha">Barba + Sobrancelha</option>
+                        <option value="Sobrancelha Masculino">Sobrancelha Masculino</option>
+                        <option value="Sobrancelha Feminino">Sobrancelha Feminino</option>
+                        <option value="Escova">Escova</option>
+                        <option value="Progressiva">Progressiva</option>
+                        <option value="Luzes Masculino">Luzes Masculino</option>
+                        <option value="Acabamento">Acabamento</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                    <span class="service-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="period">Escolha o periodo: </label>
+                    <select name="period" id="period">
+                        <option value="Manhã">Manhã</option>
+                        <option value="Tarde">Tarde</option>
+                    </select>
+                    <span class="period-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="date">Dia: </label>
+                    <input type="date" id="date">
+                    <span class="date-error"></span>
+                </div>
+                <button class="button-submit">Agendar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
