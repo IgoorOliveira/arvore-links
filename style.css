@@ -9,7 +9,7 @@
 
 body {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-image: url(./assets/background.jpg);
     background-size: cover;
     display: flex;
@@ -41,7 +41,6 @@ li {
     overflow: hidden;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border: 10px solid rgba(255, 255, 255, 0.3);
-    margin-top: 10px;
 }
 .header > .name {
     font-family: "lobster", sans-serif;
@@ -130,7 +129,6 @@ form {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    margin-top: 20px;
 }
 .form-group {
     width: 100%;

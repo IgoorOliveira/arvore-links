@@ -48,6 +48,11 @@ class Form {
         document.querySelector(`.period-error`).innerText = "";
         document.querySelector(`.date-error`).innerText = "";
     }
+    cleanForm(){
+        service.value = "";
+        period.value = "";
+        date.value = ""
+    }
 }
 buttonWhatsapp.addEventListener("click", (ev) =>{
     ev.preventDefault()
@@ -62,6 +67,9 @@ buttonSubmit.addEventListener("click", (ev) =>{
     const form = new Form(serviceInput, periodInput, dateInput);
     if(!Object.values(form).includes("")){
         sendMessage(form);
+        form.cleanForm();
+        form.resetStyle();
+        popupWrapper.classList.remove("active");
     }
 })
 
